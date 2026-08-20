@@ -92,7 +92,7 @@ export default function SessionCustomizer() {
               </label>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { length: '60 Min', desc: 'Targeted Focus & Tension Relief', price: '$90' },
+                  { length: '60 Min', desc: 'Targeted Focus & Tension Relief', price: '$110' },
                   { length: '90 Min', desc: 'Comprehensive Full Body Reset', price: '$150', popular: true },
                 ].map((dur) => (
                   <button
@@ -289,7 +289,7 @@ export default function SessionCustomizer() {
                   <div>
                     <span className="text-xs text-moody-400 block">Session Investment</span>
                     <span className="font-serif text-3xl text-gold-300 font-bold">
-                      {duration === '60 Min' ? '$90' : '$150'}
+                      {duration === '60 Min' ? '$110' : '$150'}
                     </span>
                   </div>
                   <span className="text-[10px] text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded border border-gold-400/20">

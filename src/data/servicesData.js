@@ -7,7 +7,7 @@ export const servicesData = [
     description: 'Every body holds tension differently. In this session, April blends 16 years of anatomical mastery—integrating deep tissue techniques, myofascial release, trigger point therapy, and restorative flow tailored precisely to what your muscles need that day.',
     highlight: 'Includes Cupping & Steamed Hot Towels at No Extra Charge',
     durations: [
-      { length: '60 Min', pricePlaceholder: '$90', focus: 'Targeted focus on 1–2 trouble areas (e.g., neck, shoulders, lumbar)' },
+      { length: '60 Min', pricePlaceholder: '$110', focus: 'Targeted focus on 1–2 trouble areas (e.g., neck, shoulders, lumbar)' },
       { length: '90 Min', pricePlaceholder: '$150', focus: 'The recommended standard: Comprehensive full-body treatment + deep trouble area release', popular: true },
     ],
     benefits: [
@@ -27,7 +27,7 @@ export const servicesData = [
     description: 'Carrying new life is physically demanding. April brings specialized, seasoned prenatal expertise with ergonomic side-lying positioning, supportive bolster cushioning, and safe, restorative pressure designed to alleviate pregnancy aches while honoring mother and baby.',
     highlight: 'Experienced 16-Year Specialist • Safe Trimester Positioning',
     durations: [
-      { length: '60 Min', pricePlaceholder: '$90', focus: 'Targeted comfort for lower back, hips, legs, or upper shoulders' },
+      { length: '60 Min', pricePlaceholder: '$110', focus: 'Targeted comfort for lower back, hips, legs, or upper shoulders' },
       { length: '90 Min', pricePlaceholder: '$150', focus: 'Gentle full-body restoration, soothing hip/sciatica release, and restorative calm', popular: true },
     ],
     benefits: [
@@ -47,7 +47,7 @@ export const servicesData = [
     description: 'Designed specifically for desk workers, athletes, and anyone battling persistent discomfort. April applies targeted deep tissue and myofascial techniques combined with dynamic suction cupping to decompress tight connective tissue without excessive bruising.',
     highlight: 'Includes Decompression Cupping & Hot Towels at No Extra Charge',
     durations: [
-      { length: '60 Min', pricePlaceholder: '$90', focus: 'Intensive localized focus on stubborn pain patterns' },
+      { length: '60 Min', pricePlaceholder: '$110', focus: 'Intensive localized focus on stubborn pain patterns' },
       { length: '90 Min', pricePlaceholder: '$150', focus: 'Full kinetic chain treatment (e.g., neck-to-sacrum or glute-to-foot)', popular: true },
     ],
     benefits: [
@@ -67,7 +67,7 @@ export const servicesData = [
     description: 'When stress takes a physical toll, this session eases your nervous system out of fight-or-flight into deep healing rest. Smooth, grounding strokes paired with warm towel hydrotherapy and gentle cupping leave you deeply centered.',
     highlight: 'Steamed Towels & Soothing Aromatherapy Included',
     durations: [
-      { length: '60 Min', pricePlaceholder: '$90', focus: 'Full body unwinding and nervous system grounding' },
+      { length: '60 Min', pricePlaceholder: '$110', focus: 'Full body unwinding and nervous system grounding' },
       { length: '90 Min', pricePlaceholder: '$150', focus: 'Deep restorative reset with extended scalp, neck, and foot hydrotherapy', popular: true },
     ],
     benefits: [

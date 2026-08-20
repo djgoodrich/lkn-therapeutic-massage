@@ -7,18 +7,18 @@ export const membershipsData = {
       id: 'essential',
       name: 'The Essential Reset',
       duration: '60 Minutes / Month',
-      price: '$80',
-      savings: 'Save $10 Every Month (vs $90 Single Visit)',
+      price: '$100',
+      savings: 'Save $10 Every Month (vs $110 Single Visit)',
       popular: false,
       description: 'Ideal for ongoing maintenance, tension prevention, and a dedicated monthly hour of restorative escape.',
       includes: [
-        'One (1) 60-Minute Custom Therapeutic or Prenatal Session per month ($80 vs $90)',
+        'One (1) 60-Minute Custom Therapeutic or Prenatal Session per month ($100 vs $110)',
         'Includes Cupping & Steamed Hot Towels ($0 upcharge always)',
         'Unused sessions rollover automatically each month',
-        'Book additional 60-minute sessions at the discounted $80 member rate',
+        'Book additional 60-minute sessions at the discounted $100 member rate',
         'Transfer 1 session per quarter to a family member or friend'
       ],
-      ctaText: 'Join 60-Min Membership ($80/mo)'
+      ctaText: 'Join 60-Min Membership ($100/mo)'
     },
     {
       id: 'restorative',
@@ -56,7 +56,7 @@ export const membershipsData = {
     },
     {
       title: 'Discounted Extra Sessions',
-      desc: 'Book as many additional sessions as you need throughout the month at your exclusive discounted member rate ($80/60m, $140/90m).'
+      desc: 'Book as many additional sessions as you need throughout the month at your exclusive discounted member rate ($100/60m, $140/90m).'
     }
   ]
 };
