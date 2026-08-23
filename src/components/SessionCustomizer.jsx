@@ -5,7 +5,7 @@ import { Sliders, Sparkles, Clock, Check, Flame, ArrowRight, ShieldCheck, Heart,
 import { MASSAGEBOOK_URL } from '../data/config';
 
 export default function SessionCustomizer() {
-  const [serviceType, setServiceType] = useState('Custom Therapeutic');
+  const [serviceType, setServiceType] = useState('Swedish Massage');
   const [duration, setDuration] = useState('90 Min');
   const [pressure, setPressure] = useState('Firm / Deep Tissue');
   const [focusAreas, setFocusAreas] = useState(['Neck & Shoulders', 'Lower Back & Hips']);
@@ -36,6 +36,19 @@ export default function SessionCustomizer() {
     }
   };
 
+  const handleServiceTypeChange = (type) => {
+    setServiceType(type);
+    if (type === 'Swedish Massage') {
+      setPressure('Medium Relaxation');
+    } else if (type === 'Deep Tissue Massage') {
+      setPressure('Firm / Deep Tissue');
+    } else if (type === 'Master Prenatal') {
+      setPressure('Gentle & Soothing');
+    } else if (type === 'Targeted Chronic Pain') {
+      setPressure('Deep Muscle & Fascial');
+    }
+  };
+
   return (
     <section id="customizer" className="py-24 bg-gradient-to-b from-moody-950 via-moody-900 to-moody-950 border-t border-moody-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -49,7 +62,7 @@ export default function SessionCustomizer() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-moody-100 font-normal">
             Design Your Ideal{' '}
             <span className="italic font-serif gold-text-gradient font-medium">
-              Therapeutic Treatment
+              Bodywork Treatment
             </span>
           </h2>
           <p className="text-moody-300 text-sm sm:text-base leading-relaxed">
@@ -67,15 +80,15 @@ export default function SessionCustomizer() {
               <label className="text-xs font-bold uppercase tracking-wider text-gold-400 flex items-center space-x-2">
                 <span>1. Select Treatment Modality</span>
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {['Custom Therapeutic', 'Master Prenatal', 'Targeted Pain / Sciatica'].map((type) => (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                {['Swedish Massage', 'Deep Tissue Massage', 'Master Prenatal', 'Targeted Chronic Pain'].map((type) => (
                   <button
                     key={type}
                     type="button"
-                    onClick={() => setServiceType(type)}
-                    className={`px-4 py-3 rounded-xl text-xs font-semibold border text-left transition-all ${
+                    onClick={() => handleServiceTypeChange(type)}
+                    className={`px-3 py-3 rounded-xl text-xs font-semibold border text-center transition-all ${
                       serviceType === type
-                        ? 'bg-moody-800 border-gold-400 text-gold-300 shadow-md'
+                        ? 'bg-moody-800 border-gold-400 text-gold-300 shadow-md ring-1 ring-gold-400/30'
                         : 'bg-moody-850/60 border-moody-750 text-moody-300 hover:border-moody-600'
                     }`}
                   >

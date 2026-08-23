@@ -1,10 +1,32 @@
 export const servicesData = [
   {
-    id: 'therapeutic',
-    title: 'Custom Therapeutic Massage',
-    category: 'Therapeutic',
-    tagline: 'Personalized anatomical bodywork for tension, pain, & mobility',
-    description: 'Every body holds tension differently. In this session, April blends 16 years of anatomical mastery—integrating deep tissue techniques, myofascial release, trigger point therapy, and restorative flow tailored precisely to what your muscles need that day.',
+    id: 'swedish',
+    title: 'Swedish Massage',
+    category: 'Swedish Relaxation',
+    tagline: 'Classic restorative bodywork to ease sensory overload, soothe muscles, & melt stress',
+    description: 'A quintessential full-body relaxation experience designed to calm the nervous system, enhance circulation, and melt away daily tension. April combines long, flowing gliding strokes (effleurage), gentle kneading, and rhythmic flow with complimentary steamed herbal hot towels and soothing aromatherapy to leave you deeply restored.',
+    highlight: 'Steamed Towels & Soothing Aromatherapy Included',
+    durations: [
+      { length: '60 Min', pricePlaceholder: '$110', focus: 'Full body unwinding and nervous system grounding' },
+      { length: '90 Min', pricePlaceholder: '$150', focus: 'Deep restorative reset with extended scalp, neck, and foot hydrotherapy', popular: true },
+    ],
+    benefits: [
+      'Calms the nervous system and dampens sympathetic stress response',
+      'Smooth, rhythmic strokes to enhance full-body circulation',
+      'Steamed hot towel compressions to melt surface muscle tension',
+      'Leaves you deeply grounded, peaceful, and refreshed'
+    ],
+    isPrenatal: false,
+    image: '/images/reception-lounge.jpg',
+    imageAlt: 'LKN Therapeutic Massage welcoming reception sanctuary in Cornelius, NC',
+    imagePlaceholder: 'LKN Sanctuary & Relaxation Lounge'
+  },
+  {
+    id: 'deep-tissue',
+    title: 'Deep Tissue Massage',
+    category: 'Deep Tissue Therapeutic',
+    tagline: 'Personalized anatomical bodywork for stubborn knots, tension, & restricted mobility',
+    description: 'Every body holds tension differently. In this session, April blends 16 years of anatomical mastery—integrating focused deep tissue techniques, myofascial release, trigger point therapy, and restorative flow tailored precisely to what your muscles need that day.',
     highlight: 'Includes Cupping & Steamed Hot Towels at No Extra Charge',
     durations: [
       { length: '60 Min', pricePlaceholder: '$110', focus: 'Targeted focus on 1–2 trouble areas (e.g., neck, shoulders, lumbar)' },
@@ -12,12 +34,14 @@ export const servicesData = [
     ],
     benefits: [
       'Relief from chronic neck, back, and hip tension',
-      'Improved postural alignment and range of motion',
       'Targeted trigger point and neuromuscular unwinding',
+      'Improved postural alignment and range of motion',
       'Integrated cupping and hot towels for deep fascial relaxation'
     ],
     isPrenatal: false,
-    imagePlaceholder: 'Therapeutic Massage Session in Tranquil Moody Suite'
+    image: '/images/massage-suite.jpg',
+    imageAlt: 'LKN Therapeutic Massage tranquil moody massage suite in Cornelius, NC',
+    imagePlaceholder: 'Therapeutic Deep Tissue Massage Suite'
   },
   {
     id: 'prenatal',
@@ -37,13 +61,15 @@ export const servicesData = [
       'Side-lying ergonomic comfort with plush supportive bolsters'
     ],
     isPrenatal: true,
-    imagePlaceholder: 'Gentle Prenatal Bodywork with Ergonomic Bolstering'
+    image: '/images/massage-suite.jpg',
+    imageAlt: 'Private prenatal massage suite with ergonomic bolstering in Cornelius, NC',
+    imagePlaceholder: 'Master Prenatal Bodywork Suite'
   },
   {
     id: 'pain-relief',
-    title: 'Targeted Chronic Pain & Neck/Back Restoration',
-    category: 'Therapeutic',
-    tagline: 'Focused therapeutic pressure for sciatica, tech-neck, and stubborn knots',
+    title: 'Targeted Chronic Pain & Neck Restoration',
+    category: 'Clinical Therapeutic',
+    tagline: 'Focused clinical bodywork for sciatica, tech-neck, and persistent dysfunction',
     description: 'Designed specifically for desk workers, athletes, and anyone battling persistent discomfort. April applies targeted deep tissue and myofascial techniques combined with dynamic suction cupping to decompress tight connective tissue without excessive bruising.',
     highlight: 'Includes Decompression Cupping & Hot Towels at No Extra Charge',
     durations: [
@@ -57,27 +83,9 @@ export const servicesData = [
       'Enhanced blood flow and accelerated tissue recovery'
     ],
     isPrenatal: false,
+    image: '/images/reception-lounge.jpg',
+    imageAlt: 'Targeted chronic pain and neck restoration at LKN Therapeutic Massage in Cornelius, NC',
     imagePlaceholder: 'Targeted Deep Tissue & Myofascial Muscle Release'
-  },
-  {
-    id: 'restorative-flow',
-    title: 'Restorative Nervous System Reset',
-    category: 'Therapeutic',
-    tagline: 'Calming, rhythmic bodywork to melt mental fatigue and soothe sensory overload',
-    description: 'When stress takes a physical toll, this session eases your nervous system out of fight-or-flight into deep healing rest. Smooth, grounding strokes paired with warm towel hydrotherapy and gentle cupping leave you deeply centered.',
-    highlight: 'Steamed Towels & Soothing Aromatherapy Included',
-    durations: [
-      { length: '60 Min', pricePlaceholder: '$110', focus: 'Full body unwinding and nervous system grounding' },
-      { length: '90 Min', pricePlaceholder: '$150', focus: 'Deep restorative reset with extended scalp, neck, and foot hydrotherapy', popular: true },
-    ],
-    benefits: [
-      'Dampens sympathetic nervous system stress response',
-      'Releases clenching in jaw, temples, shoulders, and diaphragm',
-      'Warm towel compressions to melt surface muscle tension',
-      'Leaves you deeply grounded, rested, and refreshed'
-    ],
-    isPrenatal: false,
-    imagePlaceholder: 'Peaceful Ambient Spa Relaxation in Candlelight'
   }
 ];
 

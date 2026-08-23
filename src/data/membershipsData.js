@@ -12,7 +12,7 @@ export const membershipsData = {
       popular: false,
       description: 'Ideal for ongoing maintenance, tension prevention, and a dedicated monthly hour of restorative escape.',
       includes: [
-        'One (1) 60-Minute Custom Therapeutic or Prenatal Session per month ($100 vs $110)',
+        'One (1) 60-Minute Swedish, Deep Tissue, or Prenatal Session per month ($100 vs $110)',
         'Includes Cupping & Steamed Hot Towels ($0 upcharge always)',
         'Unused sessions rollover automatically each month',
         'Book additional 60-minute sessions at the discounted $100 member rate',
@@ -30,7 +30,7 @@ export const membershipsData = {
       badge: 'MOST POPULAR',
       description: 'The golden standard for chronic pain sufferers, desk professionals, and expecting mothers needing comprehensive full-body unwinding.',
       includes: [
-        'One (1) 90-Minute Custom Therapeutic or Prenatal Session per month ($140 vs $150)',
+        'One (1) 90-Minute Swedish, Deep Tissue, or Prenatal Session per month ($140 vs $150)',
         'Includes Cupping & Steamed Hot Towels ($0 upcharge always)',
         'Unused sessions rollover automatically each month',
         'Priority booking access for prime evening & weekend slots',

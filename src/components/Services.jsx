@@ -8,10 +8,16 @@ import { MASSAGEBOOK_URL } from '../data/config';
 export default function Services() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filters = ['All', 'Therapeutic', 'Prenatal Care'];
+  const filters = ['All', 'Swedish Massage', 'Deep Tissue', 'Prenatal Care'];
 
   const filteredServices = activeFilter === 'All'
     ? servicesData
+    : activeFilter === 'Swedish Massage'
+    ? servicesData.filter(s => s.id === 'swedish' || s.category.toLowerCase().includes('swedish'))
+    : activeFilter === 'Deep Tissue'
+    ? servicesData.filter(s => s.id === 'deep-tissue' || s.id === 'pain-relief' || s.category.toLowerCase().includes('deep tissue') || s.category.toLowerCase().includes('therapeutic'))
+    : activeFilter === 'Prenatal Care'
+    ? servicesData.filter(s => s.isPrenatal || s.category.toLowerCase().includes('prenatal'))
     : servicesData.filter(s => s.category === activeFilter);
 
   return (
@@ -28,7 +34,7 @@ export default function Services() {
             Tailored Treatments & Rates
           </h2>
           <p className="text-moody-300 text-sm sm:text-base leading-relaxed">
-            Every session begins with a targeted anatomical check-in. Cupping therapy and steamed herbal hot towels are integrated wherever indicated at <strong className="text-gold-300 font-medium">no additional charge</strong>.
+            Every session begins with an anatomical consultation. Cupping therapy and steamed herbal hot towels are integrated wherever indicated at <strong className="text-gold-300 font-medium">no additional charge</strong>.
           </p>
 
           {/* Filter Pills */}
@@ -59,22 +65,48 @@ export default function Services() {
             >
               <div className="space-y-6">
                 
-                {/* Photo Placeholder Slot */}
-                <div className="relative aspect-[16/8] rounded-2xl bg-gradient-to-br from-moody-800 via-moody-850 to-moody-900 border border-moody-700/80 overflow-hidden flex items-center justify-center p-4 shadow-inner">
-                  <div className="text-center space-y-1.5 z-10">
-                    <div className="w-10 h-10 rounded-full bg-moody-700/80 border border-gold-400/40 flex items-center justify-center mx-auto">
-                      <ImageIcon className="w-5 h-5 text-gold-400" />
+                {/* Photo Header */}
+                {service.image ? (
+                  <div className="relative aspect-[16/9] rounded-2xl bg-moody-900 border border-moody-700/80 overflow-hidden shadow-2xl group/img">
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt || service.title}
+                      className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-700"
+                    />
+                    {/* Moody atmospheric gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-moody-950 via-moody-950/35 to-transparent pointer-events-none" />
+                    
+                    {/* Sleek overlay info badges */}
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                      <span className="text-[11px] font-semibold text-gold-300 px-3 py-1 rounded-full bg-moody-950/90 backdrop-blur-md border border-gold-400/30 shadow-md">
+                        {service.category}
+                      </span>
+                      <span className="text-[10px] text-moody-200 px-2.5 py-1 rounded-full bg-moody-950/85 backdrop-blur-md border border-moody-700/80 shadow-md">
+                        Cornelius, NC • Suite 204
+                      </span>
                     </div>
-                    <span className="text-[11px] font-medium text-gold-300 block">
-                      [Photo Slot: {service.imagePlaceholder}]
-                    </span>
-                    <span className="text-[10px] text-moody-400 block">
-                      {service.category} • Cornelius, NC
-                    </span>
+
+                    {/* Corner accents */}
+                    <div className="absolute top-3 left-3 w-3.5 h-3.5 border-t border-l border-gold-400/60 pointer-events-none" />
+                    <div className="absolute top-3 right-3 w-3.5 h-3.5 border-t border-r border-gold-400/60 pointer-events-none" />
                   </div>
-                  {/* Subtle decorative grid lines */}
-                  <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]" />
-                </div>
+                ) : (
+                  <div className="relative aspect-[16/8] rounded-2xl bg-gradient-to-br from-moody-800 via-moody-850 to-moody-900 border border-moody-700/80 overflow-hidden flex items-center justify-center p-4 shadow-inner">
+                    <div className="text-center space-y-1.5 z-10">
+                      <div className="w-10 h-10 rounded-full bg-moody-700/80 border border-gold-400/40 flex items-center justify-center mx-auto">
+                        <ImageIcon className="w-5 h-5 text-gold-400" />
+                      </div>
+                      <span className="text-[11px] font-medium text-gold-300 block">
+                        [Photo Slot: {service.imagePlaceholder}]
+                      </span>
+                      <span className="text-[10px] text-moody-400 block">
+                        {service.category} • Cornelius, NC
+                      </span>
+                    </div>
+                    {/* Subtle decorative grid lines */}
+                    <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]" />
+                  </div>
+                )}
 
                 {/* Header Information */}
                 <div>
