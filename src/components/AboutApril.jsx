@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Award, Heart, Sparkles, ShieldCheck, MapPin, Calendar } from 'lucide-react';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function AboutApril() {
   return (
@@ -140,13 +140,13 @@ export default function AboutApril() {
             {/* Actions */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <a
-                href={MASSAGEBOOK_URL}
+                href={VAGARO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 hover:scale-[1.02] transition-transform"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Schedule with April on MassageBook</span>
+                <span>Schedule with April on Vagaro</span>
               </a>
               
               <div className="flex items-center text-xs text-moody-400 space-x-2">

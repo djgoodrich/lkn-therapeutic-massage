@@ -22,7 +22,7 @@ export const faqsData = [
   {
     category: 'Memberships',
     question: 'How do the monthly wellness memberships work?',
-    answer: 'Memberships are auto-renewed once per month on your chosen date. Each month, your included session (60 or 90 min) is credited to your account. You can book on MassageBook anytime. Any extra sessions you book in the month receive your discounted member pricing.'
+    answer: 'Memberships are auto-renewed once per month on your chosen date. Each month, your included session (60 or 90 min) is credited to your account. You can book on Vagaro anytime. Any extra sessions you book in the month receive your discounted member pricing.'
   },
   {
     category: 'Memberships',
@@ -37,6 +37,6 @@ export const faqsData = [
   {
     category: 'First Visit & Location',
     question: 'How should I prepare for my first appointment?',
-    answer: 'Please arrive 5–10 minutes before your scheduled appointment time. You can select your session on MassageBook and note any tension areas or preferences. April will review your goals and tailor your session uniquely for you.'
+    answer: 'Please arrive 5–10 minutes before your scheduled appointment time. You can select your session on Vagaro and note any tension areas or preferences. April will review your goals and tailor your session uniquely for you.'
   }
 ];

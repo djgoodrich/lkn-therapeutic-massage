@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Sparkles, Calendar, Award, ShieldCheck, Heart, MapPin, ArrowRight, Flame } from 'lucide-react';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function Hero({ onOpenCustomizer }) {
   return (
@@ -67,13 +67,13 @@ export default function Hero({ onOpenCustomizer }) {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
-                href={MASSAGEBOOK_URL}
+                href={VAGARO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-moody-950 font-bold text-sm tracking-wider uppercase shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center space-x-2.5"
               >
                 <Calendar className="w-4 h-4 text-moody-950" />
-                <span>Book on MassageBook</span>
+                <span>Book on Vagaro</span>
               </a>
 
               <button

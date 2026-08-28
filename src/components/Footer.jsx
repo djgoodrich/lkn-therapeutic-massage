@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Sparkles, MapPin, Phone, Mail, Award, Heart, ShieldCheck, ArrowUp, Calendar } from 'lucide-react';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -116,13 +116,13 @@ export default function Footer() {
             </div>
 
             <a
-              href={MASSAGEBOOK_URL}
+              href={VAGARO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold text-xs uppercase tracking-wider shadow-md hover:scale-[1.02] transition-transform flex items-center justify-center space-x-2"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book on MassageBook</span>
+              <span>Book on Vagaro</span>
             </a>
           </div>
 

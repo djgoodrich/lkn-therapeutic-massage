@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sparkles, MapPin, Calendar, ExternalLink } from 'lucide-react';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,10 +75,10 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Direct Link to MassageBook with Generous Spacing */}
+            {/* Direct Link to Vagaro with Generous Spacing */}
             <div className="hidden lg:flex items-center ml-8 xl:ml-10 pl-6 xl:pl-8 border-l border-moody-750/80">
               <a
-                href={MASSAGEBOOK_URL}
+                href={VAGARO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group overflow-hidden px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-moody-950 font-semibold text-xs tracking-wider uppercase transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:scale-[1.02] active:scale-95 flex items-center space-x-2 whitespace-nowrap"
@@ -91,7 +91,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <div className="flex items-center space-x-2 lg:hidden">
               <a
-                href={MASSAGEBOOK_URL}
+                href={VAGARO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3.5 py-1.5 rounded-full bg-gold-400 text-moody-950 text-xs font-semibold uppercase tracking-wider md:hidden"
@@ -130,14 +130,14 @@ export default function Navbar() {
                 <span>20905 Torrence Chapel Rd Suite 204, Cornelius, NC</span>
               </div>
               <a
-                href={MASSAGEBOOK_URL}
+                href={VAGARO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold text-sm tracking-wider uppercase shadow-lg shadow-gold-500/20 text-center flex items-center justify-center space-x-2"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Book on MassageBook</span>
+                <span>Book on Vagaro</span>
               </a>
             </div>
           </div>

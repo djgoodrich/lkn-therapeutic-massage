@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Sliders, Sparkles, Clock, Check, Flame, ArrowRight, ShieldCheck, Heart, ExternalLink } from 'lucide-react';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function SessionCustomizer() {
   const [serviceType, setServiceType] = useState('Swedish Massage');
@@ -66,7 +66,7 @@ export default function SessionCustomizer() {
             </span>
           </h2>
           <p className="text-moody-300 text-sm sm:text-base leading-relaxed">
-            Plan your preferred duration, target muscle groups, and pressure. When you schedule on MassageBook, April will tailor every aspect to your specific needs.
+            Plan your preferred duration, target muscle groups, and pressure. When you schedule on Vagaro, April will tailor every aspect to your specific needs.
           </p>
         </div>
 
@@ -311,19 +311,19 @@ export default function SessionCustomizer() {
                 </div>
               </div>
 
-              {/* Direct Booking on MassageBook */}
+              {/* Direct Booking on Vagaro */}
               <a
-                href={MASSAGEBOOK_URL}
+                href={VAGARO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-moody-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center space-x-2"
               >
-                <span>Book This {duration} Session on MassageBook</span>
+                <span>Book This {duration} Session on Vagaro</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <p className="text-[11px] text-center text-moody-400">
-                You can select this session on MassageBook and mention your focus areas in your appointment notes.
+                You can select this session on Vagaro and mention your focus areas in your appointment notes.
               </p>
 
             </div>

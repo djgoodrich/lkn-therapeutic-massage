@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { MapPin, Clock, Calendar, Copy, Check, Navigation, Car, Sparkles, Phone, Mail, ExternalLink } from 'lucide-react';
-import { MASSAGEBOOK_URL, BUSINESS_ADDRESS } from '../data/config';
+import { VAGARO_URL, BUSINESS_ADDRESS } from '../data/config';
 
 export default function LocationHours() {
   const [copied, setCopied] = useState(false);
@@ -119,12 +119,12 @@ export default function LocationHours() {
               <div className="pt-4 border-t border-moody-800 flex items-center justify-between">
                 <span className="text-xs text-moody-400">Private One-on-One Sessions</span>
                 <a
-                  href={MASSAGEBOOK_URL}
+                  href={VAGARO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 underline underline-offset-4 flex items-center space-x-1"
                 >
-                  <span>Book on MassageBook &rarr;</span>
+                  <span>Book on Vagaro &rarr;</span>
                 </a>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function LocationHours() {
 
               {/* Note on Appointments */}
               <div className="p-4 rounded-xl bg-moody-850/60 border border-moody-800 text-xs text-moody-300 leading-relaxed">
-                <strong className="text-gold-300">Appointment-Only Practice:</strong> To preserve the quiet, private serenity of our clients during their sessions, walk-in visits cannot be accommodated. Please schedule online via MassageBook in advance.
+                <strong className="text-gold-300">Appointment-Only Practice:</strong> To preserve the quiet, private serenity of our clients during their sessions, walk-in visits cannot be accommodated. Please schedule online via Vagaro in advance.
               </div>
 
             </div>

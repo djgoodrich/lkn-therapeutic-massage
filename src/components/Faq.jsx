@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle, Sparkles, Calendar } from 'lucide-react';
 import { faqsData } from '../data/faqsData';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -99,17 +99,17 @@ export default function Faq() {
         <div className="mt-12 text-center p-8 rounded-3xl bg-moody-900/70 border border-moody-750 space-y-4">
           <h3 className="font-serif text-2xl text-moody-100 font-normal">Ready for restorative, expert bodywork?</h3>
           <p className="text-xs sm:text-sm text-moody-300 max-w-xl mx-auto">
-            Schedule your appointment online via MassageBook to choose your preferred date, time, and session length.
+            Schedule your appointment online via Vagaro to choose your preferred date, time, and session length.
           </p>
           <div className="pt-2">
             <a
-              href={MASSAGEBOOK_URL}
+              href={VAGARO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 hover:scale-[1.02] transition-transform"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book Appointment on MassageBook</span>
+              <span>Book Appointment on Vagaro</span>
             </a>
           </div>
         </div>

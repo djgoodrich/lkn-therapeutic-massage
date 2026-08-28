@@ -3,7 +3,7 @@
 import React from 'react';
 import { Sparkles, Flame, ShieldCheck, CheckCircle2, XCircle, HeartHandshake } from 'lucide-react';
 import { signatureAmenities } from '../data/servicesData';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function ValueBanner() {
   return (
@@ -149,12 +149,12 @@ export default function ValueBanner() {
 
           <div className="mt-8 pt-6 border-t border-moody-800 text-center">
             <a
-              href={MASSAGEBOOK_URL}
+              href={VAGARO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 hover:scale-[1.02] transition-transform"
             >
-              <span>Book Your Session on MassageBook</span>
+              <span>Book Your Session on Vagaro</span>
             </a>
           </div>
         </div>

@@ -3,7 +3,7 @@
 import React from 'react';
 import { Sparkles, Check, Crown, RefreshCw, Users, Shield, ArrowRight } from 'lucide-react';
 import { membershipsData } from '../data/membershipsData';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function Memberships() {
   return (
@@ -101,10 +101,10 @@ export default function Memberships() {
 
               </div>
 
-              {/* CTA Button linking to MassageBook */}
+              {/* CTA Button linking to Vagaro */}
               <div className="pt-8 mt-8 border-t border-moody-800">
                 <a
-                  href={MASSAGEBOOK_URL}
+                  href={VAGARO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-4 rounded-full font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-2 ${

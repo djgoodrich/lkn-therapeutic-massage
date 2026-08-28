@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Sparkles, Clock, Check, Calendar, ArrowRight, Heart, Shield, Image as ImageIcon } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
-import { MASSAGEBOOK_URL } from '../data/config';
+import { VAGARO_URL } from '../data/config';
 
 export default function Services() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -186,13 +186,13 @@ export default function Services() {
               {/* Action Trigger */}
               <div className="pt-6 mt-6 border-t border-moody-800">
                 <a
-                  href={MASSAGEBOOK_URL}
+                  href={VAGARO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 rounded-full bg-moody-800 hover:bg-gold-500 text-gold-300 hover:text-moody-950 font-semibold text-xs tracking-wider uppercase border border-gold-400/30 hover:border-gold-400 transition-all flex items-center justify-center space-x-2 group-hover:shadow-lg"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>Book {service.title} on MassageBook</span>
+                  <span>Book {service.title} on Vagaro</span>
                 </a>
               </div>
 
