@@ -89,7 +89,7 @@ export default function AmbientSoundscape() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-40">
+    <div className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-40">
       <div className="flex items-center space-x-2 bg-moody-900/90 backdrop-blur-md border border-gold-400/30 p-2 sm:px-3 sm:py-2 rounded-full shadow-2xl">
         <button
           onClick={toggleAudio}

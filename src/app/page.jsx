@@ -12,6 +12,7 @@ import Testimonials from '../components/Testimonials';
 import LocationHours from '../components/LocationHours';
 import Faq from '../components/Faq';
 import AmbientSoundscape from '../components/AmbientSoundscape';
+import MobileQuickBar from '../components/MobileQuickBar';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -63,6 +64,9 @@ export default function Home() {
 
       {/* Atmospheric Spa Sanctuary Ambience Toggle */}
       <AmbientSoundscape />
+
+      {/* Floating Mobile Booking & Directions Quick Bar */}
+      <MobileQuickBar />
 
     </div>
   );

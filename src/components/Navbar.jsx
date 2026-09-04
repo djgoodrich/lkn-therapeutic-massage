@@ -56,7 +56,7 @@ export default function Navbar() {
                   LKN <span className="text-gold-400 font-light italic">Therapeutic</span> Massage
                 </span>
                 <span className="text-[11px] tracking-widest uppercase text-moody-400 block font-sans">
-                  April Ravenwood, LMT • 16 Yrs Exp • Cornelius, NC
+                  April Ravenwood, LMT (NC #12129) • 16 Yrs Exp • Cornelius, NC
                 </span>
               </div>
             </a>

@@ -42,7 +42,7 @@ export default function Footer() {
 
             <div className="text-xs text-gold-300/80 space-y-1">
               <div>North Carolina Licensed Massage & Bodywork Therapist</div>
-              <div className="text-[11px] text-moody-500">[NC LMBT #License Placeholder]</div>
+              <div className="text-xs text-gold-400 font-medium tracking-wide">NC LMBT #12129</div>
             </div>
           </div>
 

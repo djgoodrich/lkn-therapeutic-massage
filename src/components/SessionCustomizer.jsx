@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sliders, Sparkles, Clock, Check, Flame, ArrowRight, ShieldCheck, Heart, ExternalLink } from 'lucide-react';
+import { Sliders, Sparkles, Clock, Check, Flame, ArrowRight, ShieldCheck, Heart, ExternalLink, Copy } from 'lucide-react';
 import { VAGARO_URL } from '../data/config';
 
 export default function SessionCustomizer() {
@@ -47,6 +47,20 @@ export default function SessionCustomizer() {
     } else if (type === 'Targeted Chronic Pain') {
       setPressure('Deep Muscle & Fascial');
     }
+  };
+
+  const [copiedNotes, setCopiedNotes] = useState(false);
+
+  const handleCopyNotes = () => {
+    const inclusions = [];
+    if (includeCupping) inclusions.push('Integrated Cupping ($0)');
+    if (includeHotTowels) inclusions.push('Steamed Hot Towels ($0)');
+    const inclusionsStr = inclusions.length > 0 ? inclusions.join(' + ') : 'None';
+
+    const text = `Preferred Session: ${duration} ${serviceType} | Pressure: ${pressure} | Focus: ${focusAreas.join(', ')} | Complimentary Amenities: ${inclusionsStr}`;
+    navigator.clipboard.writeText(text);
+    setCopiedNotes(true);
+    setTimeout(() => setCopiedNotes(false), 3000);
   };
 
   return (
@@ -311,6 +325,25 @@ export default function SessionCustomizer() {
                 </div>
               </div>
 
+              {/* Copy Notes for Vagaro */}
+              <button
+                type="button"
+                onClick={handleCopyNotes}
+                className="w-full py-2.5 px-4 rounded-xl bg-moody-800 hover:bg-moody-750 border border-gold-400/30 hover:border-gold-400/60 text-gold-300 text-xs font-semibold flex items-center justify-center space-x-2 transition-all shadow-sm"
+              >
+                {copiedNotes ? (
+                  <>
+                    <Check className="w-4 h-4 text-gold-400 shrink-0" />
+                    <span>Session Notes Copied! (Ready to paste on Vagaro)</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 text-gold-400 shrink-0" />
+                    <span>Copy Custom Plan Notes for Vagaro</span>
+                  </>
+                )}
+              </button>
+
               {/* Direct Booking on Vagaro */}
               <a
                 href={VAGARO_URL}
@@ -323,7 +356,7 @@ export default function SessionCustomizer() {
               </a>
 
               <p className="text-[11px] text-center text-moody-400">
-                You can select this session on Vagaro and mention your focus areas in your appointment notes.
+                Tip: Copy your custom plan above and paste it directly into your appointment notes on Vagaro.
               </p>
 
             </div>

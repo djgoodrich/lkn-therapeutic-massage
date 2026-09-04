@@ -124,7 +124,8 @@ export default function Hero({ onOpenCustomizer }) {
                   <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-moody-950 border border-moody-700/80 shadow-2xl group">
                     <img
                       src="/images/april-ravenwood.jpg"
-                      alt="April Ravenwood, LMT - LKN Therapeutic Massage in Cornelius, NC"
+                      alt="April Ravenwood, LMT (NC LMBT #12129) - LKN Therapeutic Massage in Cornelius, NC"
+                      decoding="async"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     />
 
@@ -136,7 +137,7 @@ export default function Hero({ onOpenCustomizer }) {
                       <div className="flex items-center justify-between">
                         <div>
                           <span className="text-[10px] uppercase tracking-widest text-gold-400 font-bold block">
-                            Master Therapist & Founder
+                            Master Therapist • NC LMBT #12129
                           </span>
                           <h4 className="font-serif text-lg text-moody-100 font-normal">
                             April Ravenwood, LMT

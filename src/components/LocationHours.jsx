@@ -53,6 +53,10 @@ export default function LocationHours() {
                     <h3 className="font-serif text-2xl text-moody-100 font-normal mt-0.5">
                       LKN Therapeutic Massage
                     </h3>
+                    <div className="flex items-center space-x-2 mt-1 mb-2">
+                      <span className="text-xs text-gold-300 font-medium">April Ravenwood, LMT</span>
+                      <span className="text-[10px] text-moody-300 bg-moody-800 px-2 py-0.5 rounded border border-gold-400/20 font-sans">NC LMBT #12129</span>
+                    </div>
                     <p className="text-sm text-moody-300 mt-1">
                       20905 Torrence Chapel Road, Suite 204<br />
                       Cornelius, NC 28031
@@ -160,30 +164,34 @@ export default function LocationHours() {
                 </div>
               </div>
 
-              {/* Map Visual Frame */}
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-moody-900 border border-moody-700/80 flex items-center justify-center text-center p-6 shadow-inner">
-                {/* Visual Map Grid Pattern */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:20px_20px]" />
-                
-                <div className="relative z-10 space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-400/40 flex items-center justify-center mx-auto animate-bounce">
-                    <MapPin className="w-6 h-6 text-gold-400" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-serif text-moody-100 block">
-                      20905 Torrence Chapel Road, Suite 204
-                    </span>
-                    <span className="text-xs text-gold-400 block font-sans">
-                      Cornelius, NC 28031
-                    </span>
+              {/* Interactive Google Map Frame */}
+              <div className="relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-moody-900 border border-moody-700/80 shadow-2xl group">
+                <iframe
+                  title="LKN Therapeutic Massage Location - 20905 Torrence Chapel Rd Suite 204, Cornelius, NC"
+                  src="https://maps.google.com/maps?q=20905+Torrence+Chapel+Road+Suite+204+Cornelius+NC+28031&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-[1.05] opacity-80 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+
+                {/* Floating Directions Badge */}
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2.5 rounded-xl bg-moody-950/90 backdrop-blur-md border border-gold-400/30 shadow-xl pointer-events-auto">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-7 h-7 rounded-lg bg-gold-500/20 border border-gold-400/40 flex items-center justify-center shrink-0">
+                      <MapPin className="w-4 h-4 text-gold-400" />
+                    </div>
+                    <div className="text-left">
+                      <span className="text-[11px] font-semibold text-moody-100 block truncate">Suite 204 • Free Client Parking</span>
+                      <span className="text-[9px] text-moody-400 block">Just off I-77 Exit 28</span>
+                    </div>
                   </div>
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1.5 text-xs text-moody-300 hover:text-gold-300 underline font-medium"
+                    className="px-3 py-1.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-moody-950 text-[10px] font-bold uppercase tracking-wider flex items-center space-x-1 shrink-0 transition-transform active:scale-95 shadow-sm"
                   >
-                    <span>View Interactive Map & Directions</span>
+                    <span>Directions</span>
                     <Navigation className="w-3 h-3" />
                   </a>
                 </div>

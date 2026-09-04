@@ -27,6 +27,8 @@ export default function AboutApril() {
                     <img
                       src="/images/april-ravenwood.jpg"
                       alt="April Ravenwood, Licensed Massage Therapist in Cornelius, NC"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
                     
@@ -48,8 +50,8 @@ export default function AboutApril() {
                           16 Yrs Exp
                         </span>
                       </div>
-                      <span className="text-[10px] text-moody-400 block mt-1">
-                        Licensed Massage & Bodywork Therapist • Cornelius, NC
+                      <span className="text-[10px] text-moody-300 block mt-1">
+                        Licensed Massage & Bodywork Therapist (NC LMBT #12129) • Cornelius, NC
                       </span>
                     </div>
                   </div>
@@ -66,10 +68,10 @@ export default function AboutApril() {
                     </div>
                     <div className="p-3 rounded-xl bg-moody-850 border border-moody-800">
                       <span className="text-[10px] uppercase tracking-wider text-gold-400 font-bold block">
-                        Specialty
+                        NC Licensure
                       </span>
-                      <span className="text-sm font-semibold text-moody-100 block">
-                        Therapeutic & Prenatal
+                      <span className="text-sm font-semibold text-gold-300 block">
+                        NC LMBT #12129
                       </span>
                     </div>
                   </div>
