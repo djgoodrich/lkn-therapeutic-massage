@@ -1,21 +1,21 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, Clock, Check, Calendar, ArrowRight, Heart, Shield, Image as ImageIcon } from 'lucide-react';
-import { servicesData } from '../data/servicesData';
+import { Sparkles, Clock, Check, Calendar, ArrowRight, Heart, Shield, Image as ImageIcon, Zap, AlertCircle } from 'lucide-react';
+import { servicesData, estheticianAddOns } from '../data/servicesData';
 import { VAGARO_URL } from '../data/config';
 
 export default function Services() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filters = ['All', 'Swedish Massage', 'Deep Tissue', 'Prenatal Care'];
+  const filters = ['All Modalities', 'Esthetician Services', 'Massage Therapy', 'Prenatal Care'];
 
-  const filteredServices = activeFilter === 'All'
+  const filteredServices = activeFilter === 'All Modalities' || activeFilter === 'All'
     ? servicesData
-    : activeFilter === 'Swedish Massage'
-    ? servicesData.filter(s => s.id === 'swedish' || s.category.toLowerCase().includes('swedish'))
-    : activeFilter === 'Deep Tissue'
-    ? servicesData.filter(s => s.id === 'deep-tissue' || s.id === 'pain-relief' || s.category.toLowerCase().includes('deep tissue') || s.category.toLowerCase().includes('therapeutic'))
+    : activeFilter === 'Esthetician Services'
+    ? servicesData.filter(s => s.category === 'Esthetician Services' || s.serviceType === 'esthetician')
+    : activeFilter === 'Massage Therapy'
+    ? servicesData.filter(s => s.category !== 'Esthetician Services' && s.serviceType !== 'esthetician')
     : activeFilter === 'Prenatal Care'
     ? servicesData.filter(s => s.isPrenatal || s.category.toLowerCase().includes('prenatal'))
     : servicesData.filter(s => s.category === activeFilter);
@@ -28,13 +28,13 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-moody-900 border border-moody-700 text-gold-300 text-xs font-semibold tracking-widest uppercase">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Master Bodywork Modalities</span>
+            <span>Master Modalities & Clinical Skincare</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-moody-100 font-normal">
             Tailored Treatments & Rates
           </h2>
           <p className="text-moody-300 text-sm sm:text-base leading-relaxed">
-            Every session begins with an anatomical consultation. Cupping therapy and steamed herbal hot towels are integrated wherever indicated at <strong className="text-gold-300 font-medium">no additional charge</strong>.
+            Every session begins with an individualized consultation. For massage, cupping therapy and steamed herbal hot towels are integrated at <strong className="text-gold-300 font-medium">no additional charge</strong>. For clinical skincare, treatments are performed by our Lead Master Medical Esthetician.
           </p>
 
           {/* Filter Pills */}
@@ -44,7 +44,7 @@ export default function Services() {
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 className={`px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all ${
-                  activeFilter === filter
+                  (activeFilter === filter || (filter === 'All Modalities' && activeFilter === 'All'))
                     ? 'bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold shadow-lg shadow-gold-500/20'
                     : 'bg-moody-900 text-moody-300 hover:text-moody-100 hover:bg-moody-850 border border-moody-800'
                 }`}
@@ -134,6 +134,22 @@ export default function Services() {
                   {service.description}
                 </p>
 
+                {/* Precaution / Disclaimer if applicable */}
+                {service.disclaimer && (
+                  <div className="p-3 rounded-xl bg-moody-900/90 border border-gold-400/30 text-xs text-moody-200 flex items-start space-x-2.5">
+                    <AlertCircle className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
+                    <span className="italic">{service.disclaimer}</span>
+                  </div>
+                )}
+
+                {/* Provider attribution if applicable */}
+                {service.provider && (
+                  <div className="text-[11px] text-gold-300/90 font-medium flex items-center space-x-1.5 pt-1">
+                    <Sparkles className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                    <span>Lead Specialist: {service.provider}</span>
+                  </div>
+                )}
+
                 {/* Benefits Checklist */}
                 <div className="space-y-2 pt-2 border-t border-moody-800">
                   <span className="text-xs font-semibold uppercase tracking-wider text-moody-400 block">
@@ -200,6 +216,63 @@ export default function Services() {
 
             </div>
           ))}
+        </div>
+
+        {/* Esthetician Add-Ons Section */}
+        <div className="mt-14 max-w-4xl mx-auto">
+          <div className="rounded-3xl bg-gradient-to-r from-moody-900 via-moody-850 to-moody-900 border border-gold-400/30 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+              <div className="space-y-3">
+                <div className="inline-flex items-center space-x-2 px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 text-[11px] font-bold uppercase tracking-wider">
+                  <Zap className="w-3.5 h-3.5 text-gold-400" />
+                  <span>Esthetician Enhancement Add-On</span>
+                </div>
+                
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-moody-100 font-normal">
+                    High Frequency Treatment
+                  </h3>
+                  <span className="font-serif text-2xl font-bold text-gold-300">
+                    +$10
+                  </span>
+                </div>
+
+                <p className="text-sm text-moody-300 leading-relaxed max-w-2xl">
+                  High frequency is an electrical treatment that kills bacteria and reduces the appearance of active acne. Can be seamlessly added to any facial or peel treatment.
+                </p>
+
+                <div className="flex flex-wrap gap-2 pt-1 text-xs text-moody-200">
+                  <span className="inline-flex items-center space-x-1.5 bg-moody-800/80 px-2.5 py-1 rounded-md border border-moody-700">
+                    <Check className="w-3.5 h-3.5 text-gold-400" />
+                    <span>Eliminates acne-causing bacteria</span>
+                  </span>
+                  <span className="inline-flex items-center space-x-1.5 bg-moody-800/80 px-2.5 py-1 rounded-md border border-moody-700">
+                    <Check className="w-3.5 h-3.5 text-gold-400" />
+                    <span>Calms active redness & inflammation</span>
+                  </span>
+                  <span className="inline-flex items-center space-x-1.5 bg-moody-800/80 px-2.5 py-1 rounded-md border border-moody-700">
+                    <Check className="w-3.5 h-3.5 text-gold-400" />
+                    <span>Select during booking on Vagaro</span>
+                  </span>
+                </div>
+              </div>
+
+              <div className="shrink-0 flex flex-col items-center sm:items-start md:items-end justify-center">
+                <a
+                  href={VAGARO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-moody-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-gold-500/20 hover:scale-[1.02] transition-transform whitespace-nowrap flex items-center space-x-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Book with High Frequency</span>
+                </a>
+                <span className="text-[10px] text-moody-400 mt-2">Available for all facial treatments</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>

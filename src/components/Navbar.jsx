@@ -18,10 +18,11 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Services & Rates', href: '#services' },
+    { label: 'Esthetics', href: '#esthetics' },
     { label: 'Prenatal Care', href: '#prenatal' },
     { label: 'Cupping & Amenities', href: '#amenities' },
     { label: 'Memberships', href: '#memberships' },
-    { label: 'Meet April', href: '#about' },
+    { label: 'Our Team', href: '#about' },
     { label: 'Location & Hours', href: '#location' },
     { label: 'FAQ', href: '#faq' },
   ];
@@ -56,7 +57,7 @@ export default function Navbar() {
                   LKN <span className="text-gold-400 font-light italic">Therapeutic</span> Massage
                 </span>
                 <span className="text-[11px] tracking-widest uppercase text-moody-400 block font-sans">
-                  April Ravenwood, LMT (NC #12129) • 16 Yrs Exp • Cornelius, NC
+                  Massage Therapy & Medical Aesthetics • Cornelius, NC
                 </span>
               </div>
             </a>

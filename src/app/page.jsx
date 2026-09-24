@@ -8,6 +8,7 @@ import Services from '../components/Services';
 import SessionCustomizer from '../components/SessionCustomizer';
 import Memberships from '../components/Memberships';
 import AboutApril from '../components/AboutApril';
+import AboutEsthetician from '../components/AboutEsthetician';
 import Testimonials from '../components/Testimonials';
 import LocationHours from '../components/LocationHours';
 import Faq from '../components/Faq';
@@ -47,6 +48,9 @@ export default function Home() {
 
         {/* Meet April Ravenwood, LMT (16 Years Experience) */}
         <AboutApril />
+
+        {/* Meet Katelynn Hargrove, Lead Master Medical Esthetician (6 Years Experience) */}
+        <AboutEsthetician />
 
         {/* Lake Norman Client Testimonials */}
         <Testimonials />

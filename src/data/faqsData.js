@@ -37,6 +37,16 @@ export const faqsData = [
   {
     category: 'First Visit & Location',
     question: 'How should I prepare for my first appointment?',
-    answer: 'Please arrive 5–10 minutes before your scheduled appointment time. You can select your session on Vagaro and note any tension areas or preferences. April will review your goals and tailor your session uniquely for you.'
+    answer: 'Please arrive 5–10 minutes before your scheduled appointment time. You can select your session on Vagaro and note any tension areas or preferences. April and Katelynn will review your goals and tailor your session uniquely for you.'
+  },
+  {
+    category: 'Esthetician Services',
+    question: 'What should I know before booking a Dermaplaning Facial?',
+    answer: 'Dermaplaning provides a complete skin reset by removing the stratum corneum (top dead skin layer) and peach fuzz, giving you an instantly brighter complexion and enabling superior skincare absorption. Please note: steam and facial massage are not included, and it is not recommended for active acne or nickel/silver allergies.'
+  },
+  {
+    category: 'Esthetician Services',
+    question: 'How does the High Frequency add-on ($10) work for acne?',
+    answer: 'High frequency is a specialized electrical treatment that generates oxygenating electrical current to eliminate acne-causing bacteria on contact, diminish inflammation, and soothe active breakouts. It can be added to any facial or peel during booking.'
   }
 ];

@@ -31,18 +31,18 @@ export default function Footer() {
                   LKN <span className="text-gold-400 italic font-light">Therapeutic</span> Massage
                 </span>
                 <span className="text-[11px] uppercase tracking-widest text-moody-400 block font-sans">
-                  April Ravenwood, LMT • 16 Yrs Experience
+                  April Ravenwood, LMT • Katelynn Hargrove, ME
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-moody-400 leading-relaxed max-w-sm">
-              Customized therapeutic massage, certified master prenatal care, and deep restorative relief in Cornelius, NC. Cupping therapy and steamed hot towels are always included with zero upcharge.
+              Customized therapeutic massage, certified master prenatal care, and clinical medical aesthetics in Cornelius, NC. Cupping therapy and steamed hot towels are always included with zero upcharge for massage.
             </p>
 
             <div className="text-xs text-gold-300/80 space-y-1">
               <div>North Carolina Licensed Massage & Bodywork Therapist</div>
-              <div className="text-xs text-gold-400 font-medium tracking-wide">NC LMBT #12129</div>
+              <div className="text-xs text-gold-400 font-medium tracking-wide">NC LMBT #12129 • Lead Medical Esthetician</div>
             </div>
           </div>
 
@@ -56,6 +56,9 @@ export default function Footer() {
                 <a href="#services" className="hover:text-gold-300 transition-colors">Services & Rates</a>
               </li>
               <li>
+                <a href="#esthetics" className="hover:text-gold-300 transition-colors">Esthetician Services</a>
+              </li>
+              <li>
                 <a href="#prenatal" className="hover:text-gold-300 transition-colors">Prenatal Care</a>
               </li>
               <li>
@@ -66,6 +69,9 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#about" className="hover:text-gold-300 transition-colors">Meet April Ravenwood</a>
+              </li>
+              <li>
+                <a href="#esthetics" className="hover:text-gold-300 transition-colors">Meet Katelynn Hargrove</a>
               </li>
               <li>
                 <a href="#faq" className="hover:text-gold-300 transition-colors">FAQ</a>
@@ -90,6 +96,10 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <span className="text-gold-400 font-bold">•</span>
                 <span>16-Year Master Prenatal Care</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-gold-400 font-bold">•</span>
+                <span>6-Year Lead Master Esthetician</span>
               </li>
               <li className="flex items-start space-x-2">
                 <span className="text-gold-400 font-bold">•</span>

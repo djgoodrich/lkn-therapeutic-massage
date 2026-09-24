@@ -23,24 +23,25 @@ export default function Hero({ onOpenCustomizer }) {
           {/* Left Column: Core Messaging */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
-            {/* 16-Year Master LMT Badge */}
+            {/* Master Team Badge */}
             <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-moody-900/90 border border-gold-400/30 text-gold-300 text-xs sm:text-sm font-medium tracking-wide shadow-md backdrop-blur-sm animate-pulse-slow">
               <Award className="w-4 h-4 text-gold-400 shrink-0" />
-              <span>16 Years of Master Therapeutic Touch • Cornelius, NC</span>
+              <span>Master Massage Therapy & Clinical Esthetics • Cornelius, NC</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-moody-100 font-normal leading-[1.15] tracking-tight">
-              Intuitive Therapeutic Bodywork for{' '}
+              Therapeutic Bodywork & Advanced Esthetics for{' '}
               <span className="font-serif italic gold-text-gradient font-medium">
-                Deep, Lasting Relief.
+                Deep, Lasting Renewal.
               </span>
             </h1>
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-moody-300 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Welcome to <strong className="text-moody-100 font-medium">LKN Therapeutic Massage</strong> by{' '}
-              <strong className="text-gold-300 font-medium">April Ravenwood, LMT</strong>. Experience deeply customized therapeutic massage, specialized prenatal care, and true restorative relief in a private Lake Norman sanctuary.
+              Welcome to <strong className="text-moody-100 font-medium">LKN Therapeutic Massage</strong>. Experience deeply customized therapeutic massage by{' '}
+              <strong className="text-gold-300 font-medium">April Ravenwood, LMT (16 Yrs Exp)</strong> and advanced clinical skincare by{' '}
+              <strong className="text-gold-300 font-medium">Katelynn Hargrove, Lead Master Medical Esthetician (6 Yrs Exp)</strong> in a private Lake Norman sanctuary.
             </p>
 
             {/* Differentiator Banner: Cupping & Hot Towels Included */}
@@ -95,16 +96,16 @@ export default function Hero({ onOpenCustomizer }) {
                 <span>16 Yrs Licensed LMT</span>
               </div>
               <div className="flex items-center space-x-2 text-xs text-moody-300">
+                <Sparkles className="w-4 h-4 text-gold-400 shrink-0" />
+                <span>Lead Medical Esthetician</span>
+              </div>
+              <div className="flex items-center space-x-2 text-xs text-moody-300">
                 <Heart className="w-4 h-4 text-terracotta-400 shrink-0" />
                 <span>Prenatal Specialist</span>
               </div>
               <div className="flex items-center space-x-2 text-xs text-moody-300">
                 <Flame className="w-4 h-4 text-gold-400 shrink-0" />
                 <span>Hot Towels Included</span>
-              </div>
-              <div className="flex items-center space-x-2 text-xs text-moody-300">
-                <MapPin className="w-4 h-4 text-moody-400 shrink-0" />
-                <span>Cornelius Suite 204</span>
               </div>
             </div>
 

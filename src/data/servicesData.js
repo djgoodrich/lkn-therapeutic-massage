@@ -86,8 +86,110 @@ export const servicesData = [
     image: '/images/reception-lounge.jpg',
     imageAlt: 'Targeted chronic pain and neck restoration at LKN Therapeutic Massage in Cornelius, NC',
     imagePlaceholder: 'Targeted Deep Tissue & Myofascial Muscle Release'
+  },
+  {
+    id: 'antioxidant-detox-facial',
+    title: 'Antioxidant Detox Facial',
+    category: 'Esthetician Services',
+    serviceType: 'esthetician',
+    tagline: 'Oxygenating facial with advanced enzyme exfoliation for a healthy, radiant glow',
+    description: 'An oxygenating facial that detoxes the skin, uses advanced enzyme exfoliation, and leaves the skin with a radiant glow! Great for all skin types and addresses all skin concerns such as dehydration, fine lines and wrinkles, uneven skin tone, dullness, and acne-prone skin.',
+    highlight: 'Oxygenating Detox • Advanced Enzyme Exfoliation',
+    durations: [
+      { length: '50 Min', pricePlaceholder: '$110', focus: 'Oxygenating detox, enzyme resurfacing & radiant skin glow', popular: true }
+    ],
+    benefits: [
+      'Oxygenates and deeply detoxifies congested skin',
+      'Advanced enzyme exfoliation sweeps away dull surface buildup',
+      'Addresses dehydration, fine lines, wrinkles, and dullness',
+      'Balances uneven skin tone and calms acne-prone skin'
+    ],
+    provider: 'Katelynn Hargrove, Lead Master Medical Esthetician (6 Yrs Exp)',
+    image: '/images/katelynn-hargrove.jpg',
+    imageAlt: 'Lead Master Medical Esthetician Katelynn Hargrove performing Antioxidant Detox Facial in Cornelius, NC',
+    imagePlaceholder: 'Antioxidant Detox & Enzyme Facial'
+  },
+  {
+    id: 'dermaplaning-facial',
+    title: 'Dermaplaning Facial',
+    category: 'Esthetician Services',
+    serviceType: 'esthetician',
+    tagline: 'Total skin reset removing dead skin & peach fuzz for a smooth, bright complexion',
+    description: 'Get ready to give your skin a total reset! Dermaplaning is used to remove the top layer of dead skin and peach fuzz. This facial helps improve skin’s texture, better product absorption, and gives the skin a smoother and brighter complexion overall.',
+    disclaimer: 'No steamer or massage included. Not recommended for active acne or nickel/silver allergies.',
+    highlight: 'Dead Skin & Peach Fuzz Removal • Instant Glow',
+    durations: [
+      { length: '50 Min', pricePlaceholder: '$150', focus: 'Epidermal reset, peach fuzz removal & boosted absorption', popular: true }
+    ],
+    benefits: [
+      'Removes top layer of dead skin cells and peach fuzz (vellus hair)',
+      'Dramatically improves topical serum and product absorption',
+      'Noticeably refines skin texture for a silky-smooth finish',
+      'Leaves skin with an immediately brighter, glowing complexion'
+    ],
+    provider: 'Katelynn Hargrove, Lead Master Medical Esthetician (6 Yrs Exp)',
+    image: '/images/massage-suite.jpg',
+    imageAlt: 'Dermaplaning facial treatment at LKN Therapeutic Massage in Cornelius, NC',
+    imagePlaceholder: 'Dermaplaning Facial Suite'
+  },
+  {
+    id: 'chemical-peel',
+    title: 'Chemical Peel',
+    category: 'Esthetician Services',
+    serviceType: 'esthetician',
+    tagline: 'Clinical exfoliation process encouraging cell turnover for fresh, healthy skin',
+    description: 'Exfoliation process, encouraging cell turnover that leaves the skin looking fresh and healthy. Improvements in the texture, tone, fine lines and wrinkles, and overall appearance of the skin.',
+    highlight: 'Encourages Rapid Cell Turnover & Renewal',
+    durations: [
+      { length: '50 Min', pricePlaceholder: '$200', focus: 'Customized clinical chemical peel for texture, tone & fine lines', popular: true }
+    ],
+    benefits: [
+      'Encourages rapid cellular turnover and skin regeneration',
+      'Noticeably improves skin texture, tone, and smoothness',
+      'Softens appearance of fine lines and wrinkles',
+      'Leaves skin looking fresh, healthy, and revitalized'
+    ],
+    provider: 'Katelynn Hargrove, Lead Master Medical Esthetician (6 Yrs Exp)',
+    image: '/images/reception-lounge.jpg',
+    imageAlt: 'Clinical chemical peel treatment at LKN Therapeutic Massage in Cornelius, NC',
+    imagePlaceholder: 'Clinical Chemical Peel'
   }
 ];
+
+export const estheticianAddOns = [
+  {
+    id: 'high-frequency',
+    title: 'High Frequency Treatment',
+    price: '$10',
+    category: 'Esthetician Add-On',
+    highlight: 'Electrical Antibacterial Treatment',
+    description: 'High frequency is an electrical treatment that kills bacteria and reduces the appearance of active acne.',
+    benefits: [
+      'Targeted electrical frequency kills acne-causing bacteria',
+      'Reduces inflammation, swelling, and redness on active breakouts',
+      'Stimulates microcirculation to accelerate cellular healing'
+    ]
+  }
+];
+
+export const leadEsthetician = {
+  name: 'Katelynn Hargrove',
+  title: 'Lead Master Medical Esthetician',
+  experience: '6 Years Experience',
+  image: '/images/katelynn-hargrove.jpg',
+  quote: 'Healthy, radiant skin starts with clinical precision, advanced cellular renewal, and attentive personalized care.',
+  bio: [
+    'LKN Therapeutic Massage is thrilled to introduce Katelynn Hargrove as our Lead Master Medical Esthetician. Bringing 6 years of specialized clinical skincare expertise, Katelynn elevates our practice with advanced, results-driven medical aesthetics.',
+    'Katelynn specializes in customized clinical treatments including oxygenating Antioxidant Detox Facials, precision Dermaplaning resurfacing, targeted Chemical Peels, and High Frequency antibacterial acne therapy.',
+    'Her approach combines medical-grade exfoliation and deep cellular turnover with meticulous care—giving your skin a complete, luminous reset in our serene Lake Norman sanctuary.'
+  ],
+  specialties: [
+    { title: 'Antioxidant Detox Facial', duration: '50 Min', price: '$110' },
+    { title: 'Dermaplaning Facial', duration: '50 Min', price: '$150' },
+    { title: 'Chemical Peel', duration: '50 Min', price: '$200' },
+    { title: 'High Frequency Add-On', duration: 'Add-On', price: '$10' }
+  ]
+};
 
 export const signatureAmenities = [
   {

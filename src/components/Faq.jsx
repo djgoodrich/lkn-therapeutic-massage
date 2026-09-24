@@ -9,7 +9,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Cupping & Amenities', 'Prenatal Care', 'Memberships', 'First Visit & Location'];
+  const categories = ['All', 'Esthetician Services', 'Cupping & Amenities', 'Prenatal Care', 'Memberships', 'First Visit & Location'];
 
   const filteredFaqs = selectedCategory === 'All'
     ? faqsData
