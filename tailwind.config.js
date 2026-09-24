@@ -39,6 +39,19 @@ module.exports = {
           500: '#c16752', // warm moody clay
           600: '#a74f3c',
         },
+        // LKN immersive palette
+        ink: '#0C1018',
+        sand: '#E4D9C6',
+        brass: '#C4A574',
+        wine: '#5C2E32',
+        midnight: '#2A364E',
+        // Live, mood-driven tokens (see src/lib/mood.js)
+        mood: {
+          a: 'rgb(var(--lkn-a) / <alpha-value>)',
+          b: 'rgb(var(--lkn-b) / <alpha-value>)',
+          light: 'rgb(var(--lkn-light) / <alpha-value>)',
+          accent: 'rgb(var(--lkn-accent) / <alpha-value>)',
+        },
         slateMood: {
           900: '#111618',
           800: '#1b2226',

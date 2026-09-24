@@ -77,3 +77,21 @@ npx vercel
 - **Therapist**: April Ravenwood, LMT (16 Years Experience)
 - **Address**: 20905 Torrence Chapel Road, Suite 204, Cornelius, NC 28031
 - **Service Area**: Cornelius, Davidson, Huntersville, Mooresville, and the greater Lake Norman region
+
+---
+
+## ✨ Immersive homepage (v2)
+
+The homepage (`/`) is now the immersive experience in `src/components/immersive/`. The previous homepage is preserved at `/classic` (not indexed).
+
+| Piece | File | Notes |
+| --- | --- | --- |
+| Mood engine | `src/lib/mood.js` | One store drives CSS variables (`--lkn-a/b/light/accent`) and WebGL uniforms. Edit palettes in `MOODS`. |
+| Aura background | `AuraField.jsx` | Raw WebGL, rendered at ~42% resolution, pauses when the tab is hidden. |
+| Hero torso | `HeroTorso.jsx` | Procedural low-poly torso (three.js + custom shader). Held → 4s exhale → drag to unwind. Pauses offscreen. |
+| Kinetic type | `KineticManifesto.jsx` | Sticky + ScrollTrigger scrub. |
+| Session builder | `JourneySelector.jsx` | Drag the stone around the dial; re-tints the whole site. Keyboard accessible. |
+| Therapeutics matrix | `TherapeuticsMatrix.jsx` | GSAP Flip expanding grid; data from `servicesData.js` + `src/data/immersiveData.js` (depth, system). |
+| Smooth scroll | `ImmersiveHome.jsx` | Lenis synced to GSAP's ticker; entry veil + `TransitionLink` exit veil. |
+
+All motion respects `prefers-reduced-motion`. After pulling these changes run `npm install` (adds `three`, `gsap`, `lenis`).
