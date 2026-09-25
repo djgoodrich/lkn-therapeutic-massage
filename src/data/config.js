@@ -6,4 +6,4 @@ export const THERAPIST_NAME = 'April Ravenwood, LMT';
 export const ESTHETICIAN_NAME = 'Katelynn Hargrove';
 export const BUSINESS_NAME = 'LKN Therapeutic Massage';
 export const LICENSE_NUMBER = 'NC LMBT #12129';
-export const SITE_URL = 'https://lkntherapeuticmassage.com';
+export const SITE_URL = 'https://lakenormanmassage.com';
